@@ -1,0 +1,193 @@
+/*esse comando deve ser sempre inserido devido ao box-sizing: border-box deve estar sempre selecionado
+o margim e o padding também são zerados para que o browser não insira preenchimentos e margens indevidamente*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body, input{
+  font-family: 'Poppins', sans-serif;
+  color: #535971
+}
+/*fundo da tela toda*/
+body {
+  background-color: #E5E5E5;
+}
+
+/*é a cor escura do header*/
+body::before { 
+  content: "";
+  width: 100%;
+  height: 436px;
+  background: #535971;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /*o -1 joga para trás esse background azul*/
+  z-index: -1;
+
+}
+
+/*é a parte mais clara do formulário - miolo onde vão os campos*/
+.page { 
+  width:750px;
+  margin: auto;
+}
+
+/*Elementos do Header - Nesse caso o h1 e o p que compõe o cabeçalho*/
+header {
+  width: 417px;
+  color: #FFFFFF;
+  margin-top: 140px;
+}
+
+header h1 {
+  font-family: 'Staatliches', cursive;
+  font-size: 48px;
+  line-height: 60px;
+  font-weight: 400;
+  font-style: normal;
+  margin-bottom: 18px;
+
+}
+
+header p{
+  font-size: 20px;
+  line-height: 30px;
+}
+
+form {
+  background-color: #FFFFFF;
+  margin-top: 58px;
+  min-height: 300px;
+  border-radius: 20px 20px 0px 0px;
+  padding: 64px;
+  /*display flex quebra o block e possibilita ter mais elementos em uma linha*/
+  display: flex;
+  /*alinha os fieldset de forma horizontal*/
+  flex-direction: column;
+  /*espaço entre os fieldsets*/
+  gap: 30px;
+}
+
+fieldset {
+  border: none;
+}
+
+.fieldset-wrapper {
+  display: flex;
+  flex-direction: column;
+  /*espaçamento entre os campos do fieldset*/
+  gap: 24px;
+}
+
+fieldset legend {
+  font-family: 'Staatliches', cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 34px;
+  border-bottom: 1px solid #E6E6F0;
+}
+
+fieldset p {
+  font-family: 'Staatliches',cursive;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-wrapper-2 {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+
+.input-wrapper span {
+  color:#767676;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.input-wrapper label{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.input-wrapper input, .two-cols input {
+  border: 1px solid #E6E6F0;
+  border-radius: 8px;
+  height: 56px;
+  background-color: #FAFAFC;
+}
+
+.two-cols {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.three-cols {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 8px;
+}
+
+.three-cols > div:nth-child(1) {
+  width: 50%;
+}
+
+.three-cols-hour {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.three-cols-hour .input-wrapper {
+  width: 140px;
+}
+
+.two-cols {
+  display: flex;
+  gap: 22px;
+}
+
+.group-three-cols p{
+  margin-bottom: 8px;
+  margin-top: 16px;
+}
+
+footer {
+  background-color: #535971;
+  width: 750px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  padding: 52px 71px;
+  margin-bottom: 366px;
+  border-radius: 0 0 20px 20px;
+
+}
+
+footer .button {
+  height: 56px;
+  background-color: #FF5374;
+  color: #FFFFFF;
+  font-family: 'Staatliches';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  border-radius: 20px;
+}

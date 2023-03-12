@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Staatliches&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Agendamento Mentoria</title>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <h1>Mentoria</h1>
+      <p>
+        Preencha o formulário abaixo para agendar a sua mentoria
+      </p>
+    </header>
+    <form id="my-form">
+      <fieldset>
+        <div class="fieldset-wrapper">
+          <legend>Informações Pessoais</legend>
+          <div class="two-cols"> 
+            <div class="input-wrapper-2">
+              <label for="mentorship-name">Nome</label>
+              <input type="text" id="mentorship-name">
+            </div>
+            <div class="input-wrapper-2"> 
+              <label for="mentorship-surname">Sobrenome</label>
+              <input type="text" id="mentorship-surname">
+            </div>
+          </div>
+
+          <div class="input-wrapper">
+            <label for="mentorship-email">E-mail <span>(digite um e-mail válido)</span></label>
+            <input type="email" id="mentorship-email">
+          </div>
+          
+          <div class="input-wrapper">
+            <label for="mentorship-password">Senha <span>(mínimo 6 caracteres)</span></label>
+            <input type="password" id="mentorship-password" minlength="6">
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <div class="fieldset-wrapper">
+          <legend>Informações do Mentor</legend>
+          <div class="input-wrapper">
+            <label for="mentorship-mentor">Nome do seu mentor <span>(Só o primeiro nome)</span></label>
+            <input type="text" id="mentorship-mentor">
+          </div>
+      </fieldset>
+
+      <fieldset>
+        <div class="fieldset-wrapper">
+          <legend>Seus horários Disponíveis</legend>
+          
+          <div class="group-three-cols">
+            <p>Primeira Mentoria</p>  
+            <div class="three-cols">
+              <div class="input-wrapper">
+                <label for="mentorship-date">Data<span>(DD/MM/AA)</span></label>
+                <input type="date" id="mentorship-date">
+              </div>
+              <div class="three-cols-hour">  
+                <div class="input-wrapper">
+                  <label for="mentorship-begin">Das</label>
+                  <input type="time" id="mentorship-begin">
+                </div> 
+
+                <div class="input-wrapper">
+                  <label for="mentorship-end">Até</label>
+                  <input type="time" id="mentorship-end">
+                </div>
+              </div>  
+            </div>
+
+            <p>Segunda Mentoria</p> 
+            <div class="three-cols">
+              <div class="input-wrapper">
+                <label for="mentorship-date2">Data <span>(DD/MM/AA)</span></label>
+                <input type="date" id="mentorship-date2">
+              </div>
+              <div class="three-cols-hour">
+                <div class="input-wrapper">
+                  <label for="mentorship-begin2">Das</label>
+                  <input type="time" id="mentorship-begin2">
+                </div> 
+                <div class="input-wrapper">
+                  <label for="mentorship-end2">Até</label>
+                  <input type="time" id="mentorship-end2">
+                </div>
+              </div>  
+            </div>
+          </div>  
+      </fieldset>
+    </form>
+    <footer>
+      <input class="button" type="submit" form="my-form" value="Salvar"> <!-- Quanto o botão de submit está fora da form, deve referenciar a form. Caso estivesse dentro, o evento padrão do botão é submit -->
+    </footer>
+  </div>  
+</body>
+</html>
